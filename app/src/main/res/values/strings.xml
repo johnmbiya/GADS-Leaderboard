@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GADS LeaderBoad</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Learning Leaders</string>
+    <string name="tab_text_2">Skill IQ Leaders</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="first_name">First Name</string>
+    <string name="project_on_github_link">Project on GITHUB(link)</string>
+    <string name="submit">Submit</string>
+    <string name="email_address">Email Address</string>
+    <string name="last_name">Last Name</string>
+    <string name="submission_successful">Submission Successful</string>
+    <string name="submission_not_successful">Submission not Successful</string>
+    <string name="learner_hour_summary">%d learning hours, %s</string>
+    <string name="learner_skill_summary">%d Skill IQ Score, %s</string>
+    <string name="required_field">This field is required</string>
+    <string name="email_field_invalid">use a valid email address</string>
+    <string name="url_field_invalid">web url invalid</string>
+    <string name="close_dialog_button">close dialog button</string>
+    <string name="are_you_sure">Are you sure</string>
+    <string name="yes">Yes</string>
+    <string name="dialog_image">dialog image</string>
+    <string name="leaderbord">LEADERBORD</string>
+
+</resources>

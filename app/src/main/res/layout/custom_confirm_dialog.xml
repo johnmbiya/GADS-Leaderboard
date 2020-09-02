@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_item"
+    >
+
+    <ImageButton
+        android:contentDescription="@string/close_dialog_button"
+        android:id="@+id/btn_close"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_vector_close_white_with_bg_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:id="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/grey"
+            android:text="@string/are_you_sure"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@color/grey"
+            android:text="\?"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <android.widget.Button
+        android:id="@+id/btn_confirm"
+        android:layout_below="@id/question"
+        android:background="@drawable/btn_confirm_bg"
+        android:text="@string/yes"
+        android:textColor="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
