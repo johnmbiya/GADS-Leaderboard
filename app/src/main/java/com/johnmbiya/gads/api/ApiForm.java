@@ -11,14 +11,20 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
+import static com.johnmbiya.gads.api.CONSTANTS.FORM_EMAIL;
+import static com.johnmbiya.gads.api.CONSTANTS.FORM_FNAME;
+import static com.johnmbiya.gads.api.CONSTANTS.FORM_LNAME;
+import static com.johnmbiya.gads.api.CONSTANTS.FORM_PATH;
+import static com.johnmbiya.gads.api.CONSTANTS.FORM_PROJECT;
+
 public interface ApiForm {
 
-    @POST("1FAIpQLSf9d1TcNU6zc6KR8bSEM41Z1g1zl35cwZr2xyjIhaMAz8WChQ/formResponse")
+    @POST(FORM_PATH)
     @FormUrlEncoded
     Call<Void> submitProject(
-            @Field("entry.1824927963") String emailAdress,
-            @Field("entry.1877115667") String firstName,
-            @Field("entry.2006916086") String lastName,
-            @Field("entry.284483984") String projectLink
+            @Field(FORM_EMAIL) String emailAdress,
+            @Field(FORM_FNAME) String firstName,
+            @Field(FORM_LNAME) String lastName,
+            @Field(FORM_PROJECT) String projectLink
     );
 }

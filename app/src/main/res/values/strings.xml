@@ -21,5 +21,8 @@
     <string name="yes">Yes</string>
     <string name="dialog_image">dialog image</string>
     <string name="leaderbord">LEADERBORD</string>
+    <string name="text_no_connectivity">Not connected</string>
+    <string name="back_online">back online</string>
+    <string name="not_connected">You are not connected</string>
 
 </resources>

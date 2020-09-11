@@ -3,10 +3,10 @@ package com.johnmbiya.gads.api;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RetrofitService {
+import static com.johnmbiya.gads.api.CONSTANTS.BASE_URL;
+import static com.johnmbiya.gads.api.CONSTANTS.FORM_URL;
 
-    public static final String BASE_URL = "https://gadsapi.herokuapp.com/";
-    public static final String FORM_URL = " https://docs.google.com/forms/d/e/";
+public class RetrofitService {
 
     private static Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(BASE_URL)

@@ -12,13 +12,9 @@ import java.util.List;
 public class HourViewModel extends ViewModel {
 
     private MutableLiveData<List<LeaderHour>> mutableLiveDatas;
-    private LearderRepository learderRepository;
 
     public void init(){
-        if(mutableLiveDatas != null){
-            return;
-        }
-        learderRepository = LearderRepository.getInstance();
+        LearderRepository learderRepository = LearderRepository.getInstance();
         mutableLiveDatas = learderRepository.getLeaderHours();
     }
 

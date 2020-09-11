@@ -4,7 +4,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BaseActivity extends AppCompatActivity {
@@ -27,15 +26,4 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    protected void hideNavigationBar() {
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-                         View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                                 | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-
-        );
-        getWindow().setNavigationBarColor(Color.TRANSPARENT);
-
-    }
 }

@@ -5,6 +5,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- don't display the til -->
+        <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -23,5 +26,16 @@
         <item name="textAppearanceButton">@style/TextAppearance.AppCompat</item>
     </style>
 
-    <color name="black">#000000</color>
+    <style name="StatusTextView">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="StatusView">
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/dimen_8</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+
 </resources>

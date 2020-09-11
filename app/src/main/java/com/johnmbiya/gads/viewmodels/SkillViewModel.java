@@ -12,13 +12,9 @@ import java.util.List;
 public class SkillViewModel extends ViewModel {
 
     private MutableLiveData<List<LeaderSkill>> mutableLiveDatas;
-    private LearderRepository learderRepository;
 
     public void init(){
-        if(mutableLiveDatas != null){
-            return;
-        }
-        learderRepository = LearderRepository.getInstance();
+        LearderRepository learderRepository = LearderRepository.getInstance();
         mutableLiveDatas = learderRepository.getLeaderSkills();
     }
 

@@ -8,11 +8,14 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
+import static com.johnmbiya.gads.api.CONSTANTS.HOURS_PATH;
+import static com.johnmbiya.gads.api.CONSTANTS.SKILLS_PATH;
+
 public interface Api {
 
-    @GET("api/hours")
+    @GET(HOURS_PATH)
     Call<List<LeaderHour>> getLeaderHours();
 
-    @GET("api/skilliq")
+    @GET(SKILLS_PATH)
     Call<List<LeaderSkill>> getLeaderSkillIq();
 }
