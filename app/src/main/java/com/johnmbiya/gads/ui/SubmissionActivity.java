@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -102,9 +103,7 @@ public class SubmissionActivity extends BaseActivity {
             dialog.dismiss();
             progressDialog.show();
             // FInaly send form data
-
-            // sendFormData();
-            showStatusDialog(true);
+            sendFormData();
         });
 
         dialog.show();
@@ -124,13 +123,17 @@ public class SubmissionActivity extends BaseActivity {
                     public void onResponse(@NotNull Call<Void> call, @NotNull Response<Void> response) {
                         if(response.isSuccessful()){
                             // show success dialog
-                            progressDialog.dismiss();
-                            showStatusDialog(true);
+                            if(response.code() == 200) {
+                                progressDialog.dismiss();
+                                showStatusDialog(true);
+                            }
+
                         } else {
                             // show error dialog
                             progressDialog.dismiss();
                             showStatusDialog(false);
                         }
+                        Log.d("RESPONSE ", response.toString());
                     }
 
                     @Override
